@@ -26,7 +26,7 @@ betahat <- sum((x-mean(x))*(y-mean(y)))/sum((x-mean(x))**2)
 alphahat <- mean(y)-betahat*mean(x)
 yhat <- alphahat + betahat*x
 resi <- y-yhat
-sigma <- (sum(resi**2)/(n-1))**0.5
+sigma <- (sum(resi**2)/(n-2))**0.5
 sigma
 
 #linear model using OLS
