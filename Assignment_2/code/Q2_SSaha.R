@@ -1,4 +1,4 @@
-ss=function(n1){
+MLE=function(n1){
   #1)function to compute mle
   MyMLE=function(data1){
     fit = optimize(data1,c(0,50),maximum = T)
@@ -24,23 +24,23 @@ ss=function(n1){
 return(v) 
 }
   #2iv)
-  hist(ss(20), col="lightblue")
+  hist(MLE(20), col="lightblue",xlab='estimated MLE of θ',main=' Histogram of the estimated MLEs of θ when n=20'))
   #2v)
   abline(v=log(1.5), col="red", lwd=3, lty=2)
   #2vi)
-  quantile(ss(20),probs=c(0.025,0.975))
+  quantile(MLE(20),probs=c(0.025,0.975))
   
   #3
-  hist(ss(40), col="lightblue")
+  hist(MLE(40), col="lightblue",xlab='estimated MLE of θ',main=' Histogram of the estimated MLEs of θ when n=40'))
   abline(v=log(1.5), col="red", lwd=3, lty=2)
   
-  quantile(ss(40),probs=c(0.025,0.975))
+  quantile(MLE(40),probs=c(0.025,0.975))
 
   #4
-  hist(ss(100), col="lightblue")
+  hist(MLE(100), col="lightblue",xlab='estimated MLE of θ',main=' Histogram of the estimated MLEs of θ when n=100'))
   abline(v=log(1.5), col="red", lwd=3, lty=2)
   
-  quantile(ss(100),probs=c(0.025,0.975))
+  quantile(MLE(100),probs=c(0.025,0.975))
   
   print(' Therefore we can see that the gap between 2.5 and 97.5-percentile points are shrinking as sample size n is increasing ')
   
